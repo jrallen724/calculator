@@ -13,6 +13,11 @@ let activeDisplay = true;
 let num1 = 0;
 let num2 = 0;
 let result = 0;
+let operator = '';
+
+function storeNumber(num) {
+    num1 = display.textContent;
+}
 
 numbers.forEach((num) => {
     num.addEventListener('click', () => {
@@ -46,4 +51,9 @@ del.addEventListener('click', () => {
     num2 = 0;
     display.textContent = '0';
     activeDisplay = true;
+ })
+
+ add.addEventListener('click', () => {
+    num1 = parseFloat(display.textContent);
+    operator = add.textContent;
  })
