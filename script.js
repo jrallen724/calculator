@@ -5,7 +5,7 @@ const subtract = document.querySelector('#subtract');
 const multiply = document.querySelector('#mutiply');
 const divide = document.querySelector('#divide');
 const equals = document.querySelector('#equals');
-const clear = document.querySelector('#equals');
+const clear = document.querySelector('#clear');
 const del = document.querySelector('#delete');
 let display = document.querySelector('.display');
 let activeDisplay = true; 
@@ -55,4 +55,9 @@ del.addEventListener('click', () => {
     } 
 })
 
- 
+ clear.addEventListener('click', () => {
+    num1 = 0;
+    num2 = 0;
+    display.textContent = '0';
+    activeDisplay = true;
+ })
