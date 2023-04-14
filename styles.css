@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.display {
+    display: flex;
+    align-items: flex-end;
+    width: 400px;
+    height: 150px;
+    border: solid 1px black;
+    justify-content: flex-end;
+    vertical-align: bottom;
+    font-size: 2.5rem;
+    background-color: white;
+}
+
+ .input {
+    display: flex;
+    height: 500px;
+    width: 400px;
+    border: solid 1px black; 
+    justify-content: center;
+}
+
+ .numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 74.25%;
+ }
+
+ .operators {
+    display: flex;
+    flex-direction: column;
+    width: 24.75%;
+
+ }
+
+ button {
+    font-size: 1.5rem;
+    margin: 0;
+    height: 20%;
+    border-radius: 10%;
+ }
+
+ .number, #negate, #decimal {
+    width: 33.33%
+ }
+
+ #clear, #delete {
+    width: 50%;
+ }
