@@ -4,7 +4,7 @@ body {
     background-color: gray;
     justify-content: center;
     align-items: center;
-    padding-top: 150px;
+    padding-top: 75px;
 }
 
 .display {
@@ -45,6 +45,7 @@ body {
     margin: 0;
     height: 20%;
     border-radius: 10%;
+    box-shadow: none;
  }
 
  .number, #negate, #decimal {
@@ -54,3 +55,4 @@ body {
  #clear, #delete {
     width: 50%;
  }
+
