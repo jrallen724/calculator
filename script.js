@@ -14,23 +14,6 @@ let num1 = 0;
 let num2 = 0;
 let result = 0;
 
-// function add() {
-//     result = num1 + num2;
-//     console.log();
-// }
-
-// function subtract() {
-//     result = num1 - num2;
-// }
-
-// function multiply() {
-//     result = num1 * num2;
-// }
-
-// function divide() {
-//     result = num1 / num2;
-// }
-
 numbers.forEach((num) => {
     num.addEventListener('click', () => {
         if (display.textContent == '0') {
@@ -53,6 +36,9 @@ del.addEventListener('click', () => {
     if (activeDisplay && display.textContent !== '0') {
         display.textContent = display.textContent.slice(0, -1);
     } 
+    if (display.textContent === '') {
+        display.textContent = '0'
+    }
 })
 
  clear.addEventListener('click', () => {
