@@ -12,7 +12,7 @@ let activeDisplay = true;
 
 let num1;
 let num2 = 0;
-let result = 0;
+let  results = [];
 let operator = '';
 
 console.log(num1);
@@ -27,6 +27,10 @@ function operate(value1, value2, operator) {
             return value1 + value2;
         case '-':
             return value1 - value2;
+        case '×':
+            return value1 * value2;
+        case '÷': 
+            return value1 / value2;
     }
     display.textContent = num1;
 }
