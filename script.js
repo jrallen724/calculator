@@ -12,27 +12,13 @@ let activeDisplay = true;
 
 let num1;
 let num2 = 0;
-let  results = [];
+let numArray = [];
 let operator = '';
 
 console.log(num1);
 
 function storeNumber(num) {
     num1 = display.textContent;
-}
-
-function operate(value1, value2, operator) {
-    switch(operator) {
-        case '+':
-            return value1 + value2;
-        case '-':
-            return value1 - value2;
-        case '×':
-            return value1 * value2;
-        case '÷': 
-            return value1 / value2;
-    }
-    display.textContent = num1;
 }
 
 numbers.forEach((num) => {
@@ -70,12 +56,38 @@ clear.addEventListener('click', () => {
 })
 
 add.addEventListener('click', () => {
-    num2 = parseFloat(display.textContent);
-    operator = add.textContent;
-    console.log(num1, operator, num2);  
-    num1 = operate(num1, num2, operator);
-    console.log(num1, num2);
-    display.textContent = num1;
-    activeDisplay = false;
 })
 
+
+/*
+
+* click operand button
+* append display to numbers array
+* if numArray is less than 2
+* operate on numbers in array with selected operand
+* store result in 1st position remove any other stored numbers
+* update display with result
+* set display to inactive
+
+*/
+
+function operate(value1, value2, operator) {
+    numArray.push(parseFloat(display.textContent));
+    if (numArray.length < 2) {
+        return
+    } else {
+        let a = numArray[0];
+        let b = numArray[1];    
+        switch(operator) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '×':
+                return a * b;
+            case '÷': 
+                return a / b;
+        }
+    }
+    display.textContent = num1;
+}
